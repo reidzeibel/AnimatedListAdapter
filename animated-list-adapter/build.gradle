@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'animated-list-adapter'
+
+    publishedGroupId = 'com.reidzeibel.animatedlistadapter'
+    libraryName = 'animated-list-adapter'
+    artifact = 'animated-list-adapter'
+
+    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+
+    siteUrl = 'https://github.com/reidzeibel/AnimatedListAdapter'
+    gitUrl = 'https://github.com/reidzeibel/AnimatedListAdapter.git'
+
+    libraryVersion = '0.2'
+
+    developerId = 'reidzeibel'
+    developerName = 'Ridwan Aditama'
+    developerEmail = 'reidzeibel@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 2
+        versionName "0.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

@@ -1,1 +1,1 @@
-include ':adapter'
+include ':animated-list-adapter'

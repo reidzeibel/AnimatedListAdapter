@@ -22,7 +22,7 @@ public abstract class BaseAnimatedListAdapter <T extends RecyclerView.ViewHolder
     private static final int COLLAPSE = 0x2;
 
     private RecyclerView mRecyclerView;
-    private int mExpandedPosition = -1;
+    public int mExpandedPosition = -1;
     private ItemAnimator itemAnimator;
 
     private Transition expandCollapse;
@@ -34,11 +34,11 @@ public abstract class BaseAnimatedListAdapter <T extends RecyclerView.ViewHolder
         }
     };
 
-    void setRecyclerView(RecyclerView recyclerView) {
+    public void setRecyclerView(RecyclerView recyclerView) {
         this.mRecyclerView = recyclerView;
     }
 
-    void initAnimatedListAdapter() {
+    public void initAnimatedListAdapter() {
         itemAnimator = new ItemAnimator();
         mRecyclerView.setItemAnimator(itemAnimator);
 
@@ -60,7 +60,7 @@ public abstract class BaseAnimatedListAdapter <T extends RecyclerView.ViewHolder
         });
     }
 
-    void setClickListener(final T holder) {
+    public void setClickListener(final T holder) {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
