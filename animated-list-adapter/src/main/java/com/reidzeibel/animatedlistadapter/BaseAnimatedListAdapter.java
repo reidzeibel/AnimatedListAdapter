@@ -82,7 +82,6 @@ public abstract class BaseAnimatedListAdapter <T extends RecyclerView.ViewHolder
                     mExpandedPosition = RecyclerView.NO_POSITION;
                 }
 
-                notifyDataSetChanged();
             }
         });
     }
