@@ -12,12 +12,12 @@ Video from Google I/O 2016 : https://www.youtube.com/watch?v=EjTJIDKT72M (exampl
 Download
 --------
 
-Download latest [aar](https://dl.bintray.com/reidzeibel/maven/com/reidzeibel/animatedlistadapter/animated-list-adapter/0.2/:animated-list-adapter-0.2.aar), or grab via Maven:
+Download latest [aar](https://dl.bintray.com/reidzeibel/maven/com/reidzeibel/animatedlistadapter/animated-list-adapter/0.3/:animated-list-adapter-0.3.aar), or grab via Maven:
 ```xml
 <dependency>
   <groupId>com.reidzeibel.animatedlistadapter</groupId>
   <artifactId>animated-list-adapter</artifactId>
-  <version>0.2</version>
+  <version>0.3</version>
   <type>pom</type>
 </dependency>
 ```
@@ -32,60 +32,11 @@ Library is distributed via JCenter
 Example Usage
 -------------
 
-I'm using [butterknife](http://jakewharton.github.io/butterknife/)
+Check the Sample App inside repo
 
-Note : will add sample app to the library
+**Result** : 
 
-```java
-// Create a RecylcerView Adapter that extends BaseAnimatedListAdapter
-public class TestAdapter extends BaseAnimatedListAdapter<TestAdapter.TestHolder> {
-
-    // Your ViewHolder here 
-    static class TestHolder extends RecyclerView.ViewHolder {
-
-        @BindView(R.id.test) TextView testview;
-
-        TestHolder(View v) {
-            super(v);
-            ButterKnife.bind(this, v);
-        }
-    }
-
-    // Pass the recyclerView to the adapter using the constructor, then call initAnimatedListAdapter()
-    public TestAdapter(RecyclerView recyclerView) {
-        setRecyclerView(recyclerView);
-        initAnimatedListAdapter();
-    }
-
-    @Override
-    public int getItemCount() {
-        return 0;
-    }
-
-    @Override
-    public TestHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_main, parent, false);
-        final TestHolder holder = new TestHolder(v);
-        
-        //add this line
-        setClickListener(holder);
-        
-        return holder;
-    }
-
-    @Override
-    public void onBindViewHolder(TestAdapter.TestHolder holder, int position) {
-        
-        final boolean isExpanded = position == mExpandedPosition;
-        
-        // expands the selected item if it is collapsed, and also collapse the previously expanded view.
-        holder.itemView.setActivated(isExpanded);
-        holder.testview.setVisibility(isExpanded? View.VISIBLE : View.GONE);
-        
-    }
-}
-```
+![](https://thumbs.gfycat.com/CrispDizzyGar-size_restricted.gif)
 
 License
 -------
