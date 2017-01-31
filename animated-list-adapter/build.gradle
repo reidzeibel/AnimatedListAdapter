@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/reidzeibel/AnimatedListAdapter'
     gitUrl = 'https://github.com/reidzeibel/AnimatedListAdapter.git'
 
-    libraryVersion = '0.3'
+    libraryVersion = '0.4'
 
     developerId = 'reidzeibel'
     developerName = 'Ridwan Aditama'
