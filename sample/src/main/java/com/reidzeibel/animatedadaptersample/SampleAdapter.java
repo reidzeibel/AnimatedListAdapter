@@ -21,11 +21,13 @@ public class SampleAdapter extends BaseAnimatedListAdapter<SampleAdapter.SampleH
     static class SampleHolder extends RecyclerView.ViewHolder {
 
         TextView title, description;
+        View layout;
 
         SampleHolder(View v) {
             super(v);
             title = (TextView) v.findViewById(R.id.title);
             description = (TextView) v.findViewById(R.id.description);
+            layout = v.findViewById(R.id.layout);
         }
     }
 
@@ -56,6 +58,6 @@ public class SampleAdapter extends BaseAnimatedListAdapter<SampleAdapter.SampleH
         holder.title.setText(item.title);
         holder.description.setText(item.description);
         holder.itemView.setActivated(isExpanded);
-        holder.description.setVisibility(isExpanded? View.VISIBLE : View.GONE);
+        holder.layout.setVisibility(isExpanded? View.VISIBLE : View.GONE);
     }
 }

@@ -23,16 +23,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),
                 LinearLayoutManager.VERTICAL));
 
-        sampleItemList.add(new SampleItem("test1", "halo"));
-        sampleItemList.add(new SampleItem("test2", "halo"));
-        sampleItemList.add(new SampleItem("test3", "halo"));
-        sampleItemList.add(new SampleItem("test4", "halo"));
-        sampleItemList.add(new SampleItem("test5", "halo"));
-        sampleItemList.add(new SampleItem("test6", "halo"));
-        sampleItemList.add(new SampleItem("test7", "halo"));
-        sampleItemList.add(new SampleItem("test8", "halo"));
-        sampleItemList.add(new SampleItem("test9", "halo"));
-        sampleItemList.add(new SampleItem("test10", "halo"));
+        sampleItemList.add(new SampleItem("test1", "Exorcizamus te, omnis immundus spiritus"));
+        sampleItemList.add(new SampleItem("test2", "omnis satanica potestas, omnis incursio infernalis adversarii"));
+        sampleItemList.add(new SampleItem("test3", "omnis congregatio et secta diabolica"));
+        sampleItemList.add(new SampleItem("test4", "Ergo, draco maledicte"));
+        sampleItemList.add(new SampleItem("test5", "et omnis legio diabolica adjuramus te."));
+        sampleItemList.add(new SampleItem("test6", "Ecclesiam tuam securi tibi facias libertate servire,"));
+        sampleItemList.add(new SampleItem("test7", "te rogamus, audi nos."));
         adapter.notifyDataSetChanged();
     }
 }
