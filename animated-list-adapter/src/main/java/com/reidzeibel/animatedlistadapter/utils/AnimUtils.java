@@ -1,7 +1,9 @@
 package com.reidzeibel.animatedlistadapter.utils;
 
 import android.content.Context;
-import android.view.animation.AnimationUtils;
+import android.support.v4.view.animation.FastOutLinearInInterpolator;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
@@ -20,24 +22,21 @@ public class AnimUtils {
 
     public static Interpolator getFastOutSlowInInterpolator(Context context) {
         if (fastOutSlowIn == null) {
-            fastOutSlowIn = AnimationUtils.loadInterpolator(context,
-                    android.R.interpolator.fast_out_slow_in);
+            fastOutSlowIn = new FastOutSlowInInterpolator();
         }
         return fastOutSlowIn;
     }
 
     public static Interpolator getFastOutLinearInInterpolator(Context context) {
         if (fastOutLinearIn == null) {
-            fastOutLinearIn = AnimationUtils.loadInterpolator(context,
-                    android.R.interpolator.fast_out_linear_in);
+            fastOutLinearIn = new FastOutLinearInInterpolator();
         }
         return fastOutLinearIn;
     }
 
     public static Interpolator getLinearOutSlowInInterpolator(Context context) {
         if (linearOutSlowIn == null) {
-            linearOutSlowIn = AnimationUtils.loadInterpolator(context,
-                    android.R.interpolator.linear_out_slow_in);
+            linearOutSlowIn = new LinearOutSlowInInterpolator();
         }
         return linearOutSlowIn;
     }
