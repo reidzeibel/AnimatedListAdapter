@@ -12,12 +12,12 @@ Video from Google I/O 2016 : https://www.youtube.com/watch?v=EjTJIDKT72M (exampl
 Download
 --------
 
-Download latest [aar](https://dl.bintray.com/reidzeibel/maven/com/reidzeibel/animatedlistadapter/animated-list-adapter/0.3/:animated-list-adapter-0.3.aar), or grab via Maven:
+Download latest [aar](https://dl.bintray.com/reidzeibel/maven/com/reidzeibel/animatedlistadapter/animated-list-adapter/0.4/:animated-list-adapter-0.4.aar), or grab via Maven:
 ```xml
 <dependency>
   <groupId>com.reidzeibel.animatedlistadapter</groupId>
   <artifactId>animated-list-adapter</artifactId>
-  <version>0.3</version>
+  <version>0.4</version>
   <type>pom</type>
 </dependency>
 ```
@@ -36,7 +36,7 @@ Check the Sample App inside repo
 
 **Result** : 
 
-![](https://thumbs.gfycat.com/CrispDizzyGar-size_restricted.gif)
+![](https://thumbs.gfycat.com/DenseShyAgouti-size_restricted.gif)
 
 License
 -------
