@@ -23,7 +23,7 @@ Download latest [aar](https://dl.bintray.com/reidzeibel/maven/com/reidzeibel/ani
 ```
 or Gradle:
 ```groovy
-compile 'com.reidzeibel.animatedlistadapter:animated-list-adapter:0.2'
+compile 'com.reidzeibel.animatedlistadapter:animated-list-adapter:0.4'
 ```
 
 Library is distributed via JCenter
